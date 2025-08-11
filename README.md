@@ -29,4 +29,36 @@ linkedin_post_generator/
 ├── .env                    # Environment variables
 └── requirements.txt        # Python dependencies
 
+```
+## Setup
+1. **Clone the repository:**
+   ```sh
+   git clone https://github.com/Asish-Bothsa/linkedin_post_generator
+   cd linkedin_post_generator
+   ```
+2. **Install dependencies:**
+   - Make sure you have Python 3.10+ and [uv](https://github.com/astral-sh/uv) installed.
+   - Install dependencies:
+     ```sh
+     uv pip install -r requirements.txt
+     # or if using pyproject.toml
+     uv pip install
+     ```
+3. **Set up API keys:**
+   - Create a `.env` file in the project root with your LLM API keys:
+     ```env
+     OPENAI_API_KEY=your_openai_key_here
+     # or
+     GOOGLE_API_KEY=your_gemini_key_here
+     ```
+4. **Configure agents and tasks:**
+   - Edit `config/agents.yaml` and `config/tasks.yaml` to customize agent behavior and tasks.
+## Troubleshooting
+- Ensure your API keys are valid and have access to the selected LLM provider.
+- If you see authentication errors, double-check your `.env` file and restart your terminal.
+- For C++ build errors on Windows, install [Microsoft C++ Build Tools](https://visualstudio.microsoft.com/visual-cpp-build-tools/).
+
+## License
+MIT
+
 
