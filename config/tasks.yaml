@@ -1,0 +1,47 @@
+identify_trend:
+  description: >
+    Analyze the user-provided topic "{topic}" and identify a trending, niche, and engaging subtopic 
+    that is both current and highly relevant for LinkedIn audiences. 
+    Stay strictly within the domain of "{topic}" — do not switch to unrelated topics.
+    Consider recent industry news, professional discussions, and thought-leadership trends.
+  expected_output: >
+    One short and compelling subtopic (5–10 words) related to "{topic}" 
+    with a brief explanation (1–2 sentences) of why it will gain engagement.
+  agent: trend_analyst
+
+create_content:
+  description: >
+    Using the identified subtopic from the previous task, create a LinkedIn-ready post that:
+    1. Starts with a strong hook related to "{topic}".
+    2. Shares 2–3 insightful points or examples connected to the subtopic.
+    3. Ends with a value-driven conclusion or call-to-action.
+    The tone should be professional yet engaging, tailored for a technical/professional audience.
+    Avoid generic statements — focus on unique, thought-provoking content.
+  expected_output: >
+    A concise LinkedIn post (4–7 lines) based on "{topic}" and the chosen subtopic, 
+    containing a clear hook, insights, and conclusion.
+  agent: content_creator
+
+optimize_engagement:
+  description: >
+    Take the draft post and enhance it to maximize engagement while staying strictly on the "{topic}" and subtopic.
+    1. Improve tone and readability for quick LinkedIn consumption.
+    2. Add 2–4 relevant and emotionally resonant emojis where appropriate.
+    3. Suggest 3–5 relevant, high-impact hashtags tied directly to "{topic}" and the subtopic.
+    4. Ensure hashtags balance popularity and niche relevance.
+  expected_output: >
+    An emotionally compelling and visually appealing LinkedIn post on "{topic}" 
+    with 3–5 relevant hashtags and emojis incorporated naturally.
+  agent: engagement_optimizer
+
+review_post:
+  description: >
+    Review the LinkedIn post for:
+    - Clarity and tone consistency.
+    - Professionalism and grammar.
+    - Adherence to LinkedIn standards.
+    Ensure that the final content stays strictly aligned with "{topic}" and the subtopic, 
+    while being engaging and ready for public publishing without further edits.
+  expected_output: >
+    A polished, final LinkedIn post about "{topic}", fully ready to post.
+  agent: post_reviewer
